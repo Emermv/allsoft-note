@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="noteApp">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<head>
+
+	<title ng-bind="title"></title>
+	 <link rel="icon" type="image/png" href="../img/logook.png">
+	<link rel="stylesheet" href="../libraries/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../libraries/bootstrap-side-navbar/source/assets/stylesheets/navbar-fixed-side.css">
+	<link rel="stylesheet" href="../libraries/bootstrap-datepicker/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../libraries/toastr/toastr.css">
+	<link rel="stylesheet"  href="../css/main/style.css">
+  <link rel="stylesheet" href="../libraries/material-design-lite/material.css">
+  <script src="../libraries/material-design-lite/material.js"></script>
+	<script src="../libraries/angular/angular.js"></script>
+	<script src="../libraries/angular-route/angular-route.js"></script>
+	<script src="../libraries/jquery/dist/jquery.js"></script>
+	<script src="../libraries/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../libraries/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<!--script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script-->
+  <script src="../libraries/firebase/firebase.js"></script>
+	<script src="../libraries/toastr/toastr.js"></script>
+	<script src="../js/services/services.js"></script>
+	<script src="../js/controllers/main/noteController.js"></script>
+	<script src="../js/controllers/main/homeController.js"></script>
+	<script src="../js/modules/main/app.js"></script>
+
+   
+</head>
+<body>
+ <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-lg-3">
+          <nav class="navbar navbar-default navbar-fixed-side">
+            <div class="container">
+              <div class="navbar-header">
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand text-center" href="#/">Allsoft Note</a>
+              </div>
+              <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                <li class="active">
+                <div class="panel">
+  <div class="panel-body">
+    <div class="row">
+    <div class="col-xs-8 col-xs-offset-3 col-sm-8 col-sm-offset-3 col-lg-8 col-lg-offset-3">
+    <img src="../img/logook.png"  class="img-thumbnail img-circle img-responsive grey-darken " id="perfil">
+    </div>
+  </div>
+
+  <ul class="list-group">
+    <li class="list-group-item text-danger">Cras justo odio</li>
+    <li class="list-group-item text-danger">Dapibus ac facilisis in</li>
+  </ul>
+</div>
+    
+             </li>
+
+             <li class="padding">
+               <div class="input-group">
+      <input type="text" class="form-control" placeholder="Buscar...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+        	 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+             </li>
+                  <li>
+                    <a href="#/home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Inicio</a>
+                  </li>
+                  <li >
+                    <a href="#/note"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Notas</a>
+                  </li>
+                  <li >
+                    <a href="#/profile"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Perfil</a>
+                  </li>
+                  <li >
+                    <a href="#/settup"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Ajustes</a>
+                  </li>
+                   <li >
+                    <a href="#/refresh"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Actualizar</a>
+                  </li>
+                   <li >
+                    <a href="#/exit"><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span> Salir</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="col-sm-9 col-lg-9">
+          <div ng-view>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+<footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo">Title</div>
+    <ul class="mdl-mini-footer__link-list">
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Privacy & Terms</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

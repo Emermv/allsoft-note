@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+  <nav aria-label="...">
+  <ul class="pager">
+    <li class="previous"><a href="{{historyhref}}"><span aria-hidden="true">&larr;</span> Regresar</a></li>
+  </ul>
+</nav>
+    <h3 class="panel-title text-center">{{note.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <ul class="list-group">
+  <li class="list-group-item">Fecha : {{note.fecha}}</li>
+  <li class="list-group-item">Hora : {{note.hora}} </li>
+  <li class="list-group-item">
+  <div class="well well-lg textview">
+  <a ng-href="{{note.link}}" target="_blank">{{note.link}}</a>
+
+  </div>
+  </li>
+  
+</ul>
+  </div>
+</div>

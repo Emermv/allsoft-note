@@ -1,0 +1,140 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading text-center"><h4>Ajustes de perfil</h4></div>
+  <div class="panel-body">
+    
+
+
+<ul class="list-group">
+<li class="list-group-item">
+  <div class="row">
+   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <button  class="btn btn-default btn-block btn-success" ng-click="change()">
+  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Aplicar y regresar
+  </button>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <button  class="btn btn-default btn-block btn-danger"  ng-click="cancel()">
+  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Descartar</button>
+    </div>
+  </div>
+</li>
+  <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-10 col-sm-11 col-md-11 col-lg-11">
+    Mostrar contraseña
+  </div>
+  <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
+  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+  <input type="checkbox" id="switch-1" class="mdl-switch__input " ng-model="settup.showpassword">
+  <span class="mdl-switch__label"></span>
+</label>
+  </div>
+  </div>
+  </li>
+
+
+  <li class="list-group-item" ng-style="{'background-color':settup.backgroundcolor}">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color de fondo de perfil
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.backgroundcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.backgroundcolor}"></span>
+        </button>
+      </span>
+    </div>
+
+  </div>
+  </div>
+  </li>
+
+ <li class="list-group-item" ng-style="{'background-color':settup.textbackgroundcolor}">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color de fondo de texto
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.textbackgroundcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.textbackgroundcolor}"></span>
+        </button>
+      </span>
+    </div>
+
+  </div>
+  </div>
+  </li>
+
+ <li class="list-group-item" ng-style="{'background-color':settup.iconsbackgroundcolor}">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color de fondo de iconos
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.iconsbackgroundcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.iconsbackgroundcolor}"></span>
+        </button>
+      </span>
+    </div>
+
+  </div>
+  </div>
+  </li>
+
+
+<li class="list-group-item" ng-style="{'color':settup.textcolor}">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color de texto  
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.textcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.textcolor}"></span>
+        </button>
+      </span>
+    </div>
+    
+  </div>
+  </div>
+  </li>
+
+ <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color de iconos  
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.iconscolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.iconscolor}"></span>
+        </button>
+      </span>
+    </div>
+    
+  </div>
+  </div>
+  </li>
+  
+
+  
+</ul>
+
+
+  </div>
+</div>

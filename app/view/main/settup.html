@@ -1,0 +1,98 @@
+
+
+<ul class="nav nav-tabs nav-justified">
+  <li role="presentation" class="active"><a href="#/settup/general" class="teal-text">General</a></li>
+  <li role="presentation"><a href="#/settup/navbar" class="black-text">Barra de navegación superior (navbar)</a></li>
+  <li role="presentation"><a href="#/settup/footer" class="black-text">Pie de pagina (Footer)</a></li>
+  <li role="presentation"><a href="#/settup/sidenav" class="black-text">Cajón de navegación (sidenav)</a></li>
+</ul>
+
+<div class="panel panel-default">
+  <div class="panel-heading ">
+      <div class="row">
+   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <button  class="btn btn-default btn-block btn-success" ng-click="change()">
+   <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Aplicar cambios
+  </button>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <button  class="btn btn-default btn-block btn-danger"  ng-click="cancel()">
+  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Por defecto</button>
+    </div>
+  </div>
+  </div>
+  <div class="panel-body">
+    
+<ul class="list-group">
+  <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+    Crear categoria de notas
+  </div>
+  <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+  <note-category callback="quitError()" ngclassobject="{'has-error':error.category,'input-group':true}" 
+  modelname="note.category" showlabel="false" showbutton="true" buttonclick="addCategory()"></note-category>
+  </div>
+  </div>
+  </li>
+
+<li class="list-group-item" ng-style="{'color':settup.textcolor}">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Eliminar categoria de notas
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+
+            <div class="input-group">
+             <select id="category"  ng-model="deletecategory" class="form-control">
+             <option ng-repeat="cat in categories" value="{{cat.id_cat}}">{{cat.name}}</option>
+             </select>
+             <span  class="input-group-btn">
+             <button class="btn btn-default" type="button" ng-click="delete()">
+             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+             </button>
+             </span>
+            </div>
+  </div>
+  </div>
+  </li>
+
+  
+</ul>
+
+
+  </div>
+</div>
+
+<dialog class="mdl-dialog ">
+    <h4 class="text-center">Nueva categoria</h4>
+    <form ng-submit="saveCategory(category)">
+    <div class="mdl-dialog__content">
+          <div class="alert alert-success" role="alert" ng-show="success">
+  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+        Guardado correctamente !
+</div>
+
+
+          <div class="form-group" ng-class="{'has-error':errors.name}">
+            <label for="recipient-name" class="control-label">Nombre *:</label>
+            <input type="text" class="form-control" id="recipient-name" ng-model="category.name">
+          </div>
+          <label for="color" ng-class="{'text-danger':errors.color}">Color *:</label>
+        <div class="input-group" ng-class="{'has-error':errors.color}">
+       <input  type="color" placeholder="Seleccione un color" class="form-control" ng-model="category.color" id="color" />
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" ng-style="{'color':category.color}"></span>
+        </button>
+      </span>
+    </div>
+</div>
+    <div class="mdl-dialog__actions">
+      <button type="submit" class="btn btn-primary btn-block">Aceptar</button>
+      <button type="reset" class="btn btn-danger  btn-block" ng-click="closeModal()">Cancelar</button>
+    </div>
+     </form>
+  </dialog>

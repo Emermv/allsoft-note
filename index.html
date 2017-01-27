@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="noteApp" ng-controller="loginController" lang="es">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Allsoft note</title>
+  <link rel="icon" type="image/png" href="img/logook.png">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet"  href="bower_components/bootstrap-datepicker/css/bootstrap-datepicker.css">
+   <link rel="stylesheet"  href="bower_components/bootstrap-fileinput/css/fileinput.min.css">
+   <link rel="stylesheet"  href="bower_components/angular-toastr/dist/angular-toastr.min.css">
+   <link rel="stylesheet"  href="bower_components/ngprogress/ngProgress.css">
+	<link rel="stylesheet"  href="css/login/style.css">
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+   <script src="bower_components/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+    <script src="bower_components/ngprogress/ngprogress.min.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="js/services/services.js"></script>
+	<script src="js/modules/login/app.js"></script>
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/">Allsoft Note</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/log-In">Iniciar sesion <span class="sr-only">(current)</span></a></li>
+        <li><a href="#/Sign-Up">Registrarte</a></li>
+          <li><a href="#/">Ayuda</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Salir</a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
+<main>
+	<div ng-view></div>
+</main>
+<footer>
+	
+</footer>
+</body>
+</html>

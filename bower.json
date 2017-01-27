@@ -1,0 +1,31 @@
+{
+  "name": "note",
+  "authors": [
+    "Emer <emer.moralesvega@hotmail.com>"
+  ],
+  "description": "app para gestionar mis notas",
+  "main": "app/index.html",
+  "license": "allsoft",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.1",
+    "bootstrap": "~3.3.7",
+    "angular": "~1.5.9",
+    "angular-route": "~1.5.9",
+    "material-design-lite": "^1.2.1",
+    "bootstrap-fileinput": "^4.3.5",
+    "ngprogress": "^1.1.3",
+    "angular-bootstrap-colorpicker": "^3.0.25",
+    "angularfire": "^2.1.0",
+    "angular-toastr": "^2.1.1",
+    "angular-datepicker": "^2.0.3",
+    "jszip": "Stuk/jszip#^3.1.3"
+  }
+}

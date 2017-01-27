@@ -1,0 +1,59 @@
+  <ul class="nav nav-tabs nav-justified">
+  <li role="presentation" class="active"><a href="#/home/All-notes">Todas las notas ({{files.length+links.length+texts.length}})</a></li>
+  <li role="presentation"><a href="#/home/texts">Textos</a></li>
+  <li role="presentation"><a href="#/home/links">Links</a></li>
+  <li role="presentation"><a href="#/home/files">Archivos</a></li>
+</ul>
+<form>
+<div class="input-group padding">
+      <input type="text" class="form-control" placeholder="Buscar..." ng-model="filterNote">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit">
+           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+    </form>
+  <div class="list-group">
+  <a ng-repeat="text in texts | filter:filterNote" href="#/home/texts/{{text.$id}}" class="list-group-item"  ng-style="{'background-color':text.category}" ng-click="changeHistory($event)">
+    <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+     <i class="material-icons  white img-circle img-responsive large">text_format</i>
+    </div>
+    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+    <h4 class="list-group-item-heading">{{text.title}}</h4>
+    <p class="list-group-item-text">{{'Fecha : '+text.fecha}}</p>
+    <p class="list-group-item-text">{{'Hora  : '+text.hora}}</p>
+    </div>
+    </div>
+    
+  </a>
+
+   <a  href="#/home/links/{{link.$id}}" class="list-group-item" ng-repeat="link in links | filter:filterNote" ng-style="{'background-color':link.category}" ng-click="changeHistory($event)">
+   <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+     <i class="material-icons  white img-circle img-responsive large">link</i>
+    </div>
+    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+    <h4 class="list-group-item-heading">{{link.title}}</h4>
+    <p class="list-group-item-text">{{'Fecha : '+link.fecha}}</p>
+    <p class="list-group-item-text">{{'Hora  : '+link.hora}}</p>
+    </div>
+    </div>
+  </a>
+  
+<a  href="#/home/files/{{file.$id}}" class="list-group-item" ng-repeat="file in files | filter:filterNote" ng-style="{'background-color':file.category}" ng-click="changeHistory($event)">
+ <div class="row">
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+     <i class="material-icons  white img-circle img-responsive large">attach_file</i>
+    </div>
+    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+      <h4 class="list-group-item-heading">{{file.title}}</h4>
+    <p class="list-group-item-text">{{'Fecha : '+file.fecha}}</p>
+    <p class="list-group-item-text">{{'Hora  : '+file.hora}}</p>
+    </div>
+    </div>
+  </a>
+</div> 
+
+

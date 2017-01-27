@@ -1,0 +1,10 @@
+<div class="list-group">
+  <a href="#" class="list-group-item"
+   ng-class="{'blue':(note.category==category.id_cat),'teal lighten-2':(note.category=='importantes')}" 
+   ng-repeat="note in notes">
+    <label ng-repeat="category in categories">{{category.name}} {{category.id_cat}} {{category.id_cat==note.category}}</label>
+    <h4 class="list-group-item-heading">{{note.title}}</h4>
+    <p class="list-group-item-text">{{'Fecha : '+note.fecha}}</p>
+    <p class="list-group-item-text">{{'Hora  : '+note.hora}}</p>
+  </a>
+</div> 

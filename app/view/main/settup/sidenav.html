@@ -1,0 +1,216 @@
+<ul class="nav nav-tabs nav-justified">
+  <li role="presentation" ><a href="#/settup/general" class="black-text">General</a></li>
+  <li role="presentation" ><a href="#/settup/navbar" class="black-text">Barra de navegación superior (navbar)</a></li>
+  <li role="presentation" ><a href="#/settup/footer" class="black-text">Pie de pagina (Footer)</a></li>
+  <li role="presentation" class="active"><a href="#/settup/sidenav" class="teal-text">Cajón de navegación (sidenav)</a></li>
+</ul>
+<div class="panel panel-default">
+  <div class="panel-heading">
+     <div class="row">
+   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <button  class="btn btn-default btn-block btn-success" ng-click="save()">
+  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Aplicar cambios
+  </button>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <button  class="btn btn-default btn-block btn-danger"  ng-click="cancel()">
+  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Por defecto</button>
+    </div>
+  </div>
+  </div>
+
+  <div class="panel-body">
+     
+     <ul class="list-group">
+  <li class="list-group-item" ng-style="{'background-color':settup.sidenavbackgroundcolor}">
+      <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color de fondo
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.sidenavbackgroundcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.sidenavbackgroundcolor}"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+  </div>
+
+  </li>
+
+ <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   <span ng-style="{'color':settup.sidenavtitlecolor}">Color de título</span>
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.sidenavtitlecolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.sidenavtitlecolor}"></span>
+        </button>
+      </span>
+    </div>
+
+  </div>
+  </div>
+  </li>
+
+  <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   <span ng-style="{'color':settup.sidenavuserinfocolor}">Color de información de usuario</span>
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.sidenavuserinfocolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.sidenavuserinfocolor}"></span>
+        </button>
+      </span>
+    </div>
+
+  </div>
+  </div>
+  </li>
+
+<li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   <span ng-style="{'color':settup.sidenavuseremailcolor}">Color de email del usuario</span>
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.sidenavuseremailcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.sidenavuseremailcolor}"></span>
+        </button>
+      </span>
+    </div>
+
+  </div>
+  </div>
+  </li>
+
+ <li class="list-group-item" ng-style="{'background-color':settup.sidenavemailbackgroundcolor}">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color de fondo de email de usuario
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.sidenavemailbackgroundcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.sidenavemailbackgroundcolor}"></span>
+        </button>
+      </span>
+    </div>
+
+  </div>
+  </div>
+  </li>
+
+ <li class="list-group-item" ng-style="{'background-color':settup.sidenavprofilebackgroundcolor}">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color de fondo de tarjeta de perfil
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.sidenavprofilebackgroundcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.sidenavprofilebackgroundcolor}"></span>
+        </button>
+      </span>
+    </div>
+
+  </div>
+  </div>
+  </li>
+
+   <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color del icono inicio
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.sidenaviconhomecolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.sidenaviconhomecolor}"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+  </div>
+  </li>
+
+ <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color del icono notas
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.sidenaviconnotecolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.sidenaviconnotecolor}"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+  </div>
+  </li>
+
+  <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color del icono perfil
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.sidenaviconprofilecolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.sidenaviconprofilecolor}"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+  </div>
+  </li>
+
+    <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color del icono ajustes
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.sidenaviconsettupcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.sidenaviconsettupcolor}"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+  </div>
+  </li>
+
+</ul>
+
+  </div>
+</div>
+

@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+  <nav aria-label="...">
+  <ul class="pager">
+    <li class="previous"><a href="{{historyhref}}"><span aria-hidden="true">&larr;</span> Regresar</a></li>
+  </ul>
+</nav>
+    <h3 class="panel-title text-center">{{note.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <ul class="list-group">
+  <li class="list-group-item">Fecha : {{note.fecha}}</li>
+  <li class="list-group-item">Hora : {{note.hora}} </li>
+  <li class="list-group-item">
+  <div class="well well-lg textview" ng-style="{'font-size':(zoomtext+'px')}">
+  {{note.text}}
+  </div>
+  </li>
+  <li class="list-group-item">
+  	<!-- Mini FAB button -->
+    <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab red" style="float: right;" ng-click="zoomin()">
+  <i class="material-icons">zoom_out</i>
+</button>
+    </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab blue" style="float: right;margin-top:5px;" ng-click="zoomout()">
+  <i class="material-icons">zoom_in</i>
+</button>
+    </div>
+    </div>
+
+  </li>
+  
+</ul>
+  </div>
+</div>

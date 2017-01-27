@@ -1,0 +1,64 @@
+
+<div class="container-fluid">
+<div class="profile-widget">
+  	<div class="header-widget cf" ng-style="{'background-color':settup.backgroundcolor}">
+      <a href="#" target="_blank" class="avatar">
+      <img ng-src="{{user.profile}}" alt="{{user.name}}" ></a>
+			<h2>{{user.email}}</h2>
+			<p>{{user.name+' '+user.lastname}}
+			  </p>
+		</div>
+		<ul class="nav nav-pills nav-justified profile-widget-content" ng-style="{'background-color':settup.textbackgroundcolor}" >
+		<li role="presentation">
+    <a class="cursor-pointer" > 
+    <label  ng-style="{'color':settup.textcolor}">Nombres : {{user.name}}</label>
+    </a> 
+    </li>
+		<li role="presentation">
+    <a class="cursor-pointer" >
+    <label ng-style="{'color':settup.textcolor}">Apellidos : {{user.lastname}}</label>
+     </a> 
+     </li>
+		<li role="presentation">
+    <a class="cursor-pointer" > 
+    <label ng-style="{'color':settup.textcolor}">Cumpleaños : {{user.birthdate}}</label>
+    </a>
+     </li>
+		<li role="presentation">
+    <a class="cursor-pointer" >
+      <label ng-style="{'color':settup.textcolor}">Genero : {{user.gender}}</label>
+    </a> </li>
+		<li role="presentation">
+    <a class="cursor-pointer" >
+      <label ng-style="{'color':settup.textcolor}">Usuario : {{user.username}}</label>
+    </a> 
+    </li>
+		<li role="presentation"><a class="cursor-pointer" >
+		  <label for="password"  ng-style="{'color':settup.textcolor}">Contraseña : </label>
+       <label ng-bind="user.password" ng-if="settup.showpassword"></label>
+       <label ng-bind="hidepassword" ng-if="settup.showpassword==false"></label>
+		 </a> </li>
+           </ul> 
+		<div class="divider">
+		</div>
+<ul class="nav nav-pills nav-justified profile-widget-icons" ng-style="{'background-color':settup.iconsbackgroundcolor}">
+  <li role="presentation">
+  <a href="#/profile" class="btn-lg ">
+  <span class="glyphicon glyphicon-user" aria-hidden="true" ng-style="{'color':settup.iconscolor}"></span>
+  </a>
+  </li>
+  <li role="presentation">
+  <a href="#/profile/edit" class="btn-lg ">
+  <span class="glyphicon glyphicon-pencil" aria-hidden="true" ng-style="{'color':settup.iconscolor}">
+  </span>
+  </a>
+  </li>
+  <li role="presentation">
+  <a href="#/profile/settup" class="btn-lg "> 
+  <span class="glyphicon glyphicon-cog" aria-hidden="true" ng-style="{'color':settup.iconscolor}">
+  </span>
+  </a>
+  </li>
+</ul>
+	</div>
+</div>

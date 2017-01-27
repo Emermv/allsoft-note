@@ -1,0 +1,86 @@
+<ul class="nav nav-tabs nav-justified">
+  <li role="presentation" ><a href="#/settup/general" class="black-text">General</a></li>
+  <li role="presentation" ><a href="#/settup/navbar" class="black-text">Barra de navegación superior (navbar)</a></li>
+  <li role="presentation" class="active"><a href="#/settup/footer" class="teal-text">Pie de pagina (Footer)</a></li>
+  <li role="presentation"><a href="#/settup/sidenav" class="black-text">Cajón de navegación (sidenav)</a></li>
+</ul>
+<div class="panel panel-default">
+  <div class="panel-heading">
+     <div class="row">
+   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <button  class="btn btn-default btn-block btn-success" ng-click="save()">
+  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Aplicar cambios
+  </button>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  <button  class="btn btn-default btn-block btn-danger"  ng-click="cancel()">
+  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Por defecto</button>
+    </div>
+  </div>
+  </div>
+
+  <div class="panel-body">
+     
+     <ul class="list-group">
+  <li class="list-group-item" ng-style="{'background-color':settup.footerbackgroundcolor}">
+      <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color de fondo
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.footerbackgroundcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.footerbackgroundcolor}"></span>
+        </button>
+      </span>
+    </div>
+  </div>
+  </div>
+
+  </li>
+
+ <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   <span ng-style="{'color':settup.footertextcolor}">Color de texto </span>
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.footertextcolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.footertextcolor}"></span>
+        </button>
+      </span>
+    </div>
+
+  </div>
+  </div>
+  </li>
+
+ <li class="list-group-item">
+  <div class="row">
+  <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
+   Color de iconos
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+      <div class="input-group">
+       <input colorpicker="rgba" type="text" placeholder="Seleccione un color" class="form-control" ng-model="settup.footericonscolor"/>
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">
+           <span class="glyphicon glyphicon-tint" aria-hidden="true" ng-style="{'color':settup.footericonscolor}"></span>
+        </button>
+      </span>
+    </div>
+
+  </div>
+  </div>
+  </li>
+</ul>
+
+  </div>
+</div>
+

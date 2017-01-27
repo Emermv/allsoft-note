@@ -1,0 +1,58 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+  <nav aria-label="...">
+  <ul class="pager">
+    <li class="previous"><a href="{{historyhref}}"><span aria-hidden="true">&larr;</span> Regresar</a></li>
+  </ul>
+</nav>
+    <h3 class="panel-title text-center">{{note.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <ul class="list-group">
+  <li class="list-group-item">Fecha : {{note.fecha}}</li>
+  <li class="list-group-item">Hora : {{note.hora}} </li>
+  <li class="list-group-item">
+  <div class="well well-lg textview" >
+   <div  ng-class="{'row':(contador==0)}">
+         <div ng-repeat="file in note.files ">
+    <div ng-if="(file.type=='image/jpeg' || file.type=='image/png' || file.type=='image/jpg' || file.type=='image/gif')">
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+   <div class="thumbnail">
+      <img ng-src="{{file.url}}" alt="{{file.name}} {{contador=$index}}" class="file-detail-img">
+      <div class="caption">
+         <p><strong>  Nombre : {{file.name.substring(0, 25)}}...</strong></p>
+        <p> <strong > Peso   : {{file.size}}</strong></p>
+        <p> <strong > Tipo   : {{file.type}}</strong></p>
+        <p>
+         <a  class="btn btn-default btn-block btn-success" ng-href="{{file.url}}" download="{{file.name}}">
+       <span class="glyphicon glyphicon-download-alt"></span> Descargar
+        </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+   
+    </div>
+  
+    <ul ng-if="(file.type!='image/jpeg' && file.type!='image/png' && file.type!='image/jpg' && file.type!='image/gif')" class="list-group">
+      <li class="list-group-item">
+   <p> <strong > Nombre : {{file.name}}</strong></p>
+   <p> <strong > Peso   : {{file.size}}</strong></p>
+     <pre> Tipo   : {{file.type}}<br/> Url de descarga : {{file.url}}</pre>
+   <p> 
+   <a  class="btn btn-default btn-block btn-success" ng-href="{{file.url}}">
+  <span class="glyphicon glyphicon-download-alt"></span> Descargar
+  </a>
+  </p>
+      </li>
+    </ul>
+   
+    </div>
+   </div>
+  </div>
+  </li>
+  
+</ul>
+  </div>
+</div>

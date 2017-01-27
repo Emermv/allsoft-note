@@ -1,0 +1,112 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-center ">Modificar perfil</div>
+  <div class="panel-body">
+    <form ng-submit="saveUser()">
+    <div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="alert alert-danger" role="alert" ng-show="status">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+        {{error}}
+</div>
+
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="alert alert-success" role="alert" ng-show="saveuser">
+  <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+        {{successmessage}}
+</div>
+
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+  <div class="form-group" ng-class="{'has-error':errors.name}">
+    <label for="name">Nombre *</label>
+    <input type="text" class="form-control" id="name" placeholder="Nombre" ng-model="user.name" ng-focus="quitError()">
+  </div>
+
+  <div class="form-group" ng-class="{'has-error':errors.lastname}">
+    <label for="lastname">Apellidos *</label>
+    <input type="text" class="form-control" id="lastname" placeholder="Apellidos" ng-model="user.lastname" ng-focus="quitError()">
+  </div>
+
+  <div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+<div class="form-group " ng-class="{'has-error':errors.birthdate}">
+    <label for="birthdate">Fecha de nacimiento *</label>
+    <input type="text" class="form-control" id="birthdate" placeholder="Fecha de nacimiento" ng-model="user.birthdate" ng-focus="quitError()">
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+<div class="form-group " ng-class="{'has-error':errors.gender}">
+    <label for="gender">Genero *</label>
+    <select id="gender" ng-model="user.gender" class="form-control" ng-focus="quitError()">
+    	<option value="Hombre">Hombre</option>
+    	<option value="Mujer">Mujer</option>
+    </select>
+  </div>
+</div>
+</div>
+
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+  <div class="form-group" ng-class="{'has-error':errors.email}">
+    <label for="email">Email *</label>
+    <input type="email" class="form-control" id="email" placeholder="E-mail" ng-model="user.email" ng-focus="quitError()">
+  </div>
+
+ <div class="form-group">
+         <label for="profile">Foto *</label>
+       <input id="profile" type="file"  name="files" class="file" data-preview-file-type="text" accept="image/jpeg,image/png,image/jpg">
+ </div>
+
+  <div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+<div class="form-group " ng-class="{'has-error':errors.username}">
+    <label for="username">Usuario *</label>
+    <input type="text" class="form-control" id="username" placeholder="Usuario" ng-model="user.username" ng-focus="quitError()">
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+<div class="form-group " ng-class="{'has-error':errors.password}">
+    <label for="password">Contraseña *</label>
+    <input type="password" class="form-control" id="password" placeholder="Contraseña" ng-model="user.password" ng-focus="quitError()">
+  </div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+<div class="row">
+ <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+  <a   class="btn btn-danger btn-block " ng-click="cancel()">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Cancelar
+  </a>
+  </div>
+
+ <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+  <button type="submit" class="btn btn-success btn-block " >
+    <span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> Aceptar
+  </button>
+  </div>
+
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+ <button type="reset" class="btn btn-info btn-block " ng-click="user={}" >
+  <span class="glyphicon glyphicon-floppy-remove" aria-hidden="true"></span> Limpiar
+ </button>
+  </div>
+ 
+  </div>
+  </form>
+  </div>
+</div>

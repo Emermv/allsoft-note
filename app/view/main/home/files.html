@@ -1,0 +1,44 @@
+  <ul class="nav nav-tabs nav-justified">
+  <li role="presentation" ><a href="#/home/All-notes">Todas las notas</a></li>
+  <li role="presentation" ><a href="#/home/texts">Textos</a></li>
+  <li role="presentation" ><a href="#/home/links">Links</a></li>
+  <li role="presentation" class="active"><a href="#/home/files">Archivos ({{notes.length}})</a></li>
+</ul>
+
+
+<div class="list-group">
+  <a href="#/home/files/{{note.$id}}" class="list-group-item" ng-repeat="note in notes" ng-style="{'background-color':note.category}" ng-click="changeHistory($event)">
+  <div class="row">
+    <div class="col-xs-9 col-sm-10 col-md-11 col-lg-11">
+    <h4 class="list-group-item-heading">{{note.title}}</h4>
+    <p class="list-group-item-text">{{'Fecha : '+note.fecha}}</p>
+    <p class="list-group-item-text">{{'Hora  : '+note.hora}}</p>
+
+    </div>
+    <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1">
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab red" ng-click="deleteNote($event,note.$id)">
+  <i class="material-icons white-text">delete</i>
+</button>
+
+    </div>
+  </div>
+    
+  </a>
+</div> 
+<dialog class="mdl-dialog ">
+    <h4 class="text-center">Alerta !</h4>
+    <form ng-submit="okdelete()">
+    <div class="mdl-dialog__content">
+          <div class="alert alert-warning" role="alert" >
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Error:</span>
+       Está a punto de eliminar una nota, ¿desea continuar?
+</div>
+
+</div>
+    <div class="mdl-dialog__actions">
+      <button type="submit" class="btn btn-success btn-block">Si</button>
+      <button type="reset" class="btn btn-danger  btn-block" ng-click="closeModal()">No</button>
+    </div>
+     </form>
+  </dialog>

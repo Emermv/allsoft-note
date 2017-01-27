@@ -1,0 +1,17 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "app que gestiona mis notas ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test note"
+  },
+  "author": "emer",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-uncss": "^0.6.1"
+  }
+}

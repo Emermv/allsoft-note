@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="noteApp" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<head >
+
+	<title ng-bind="titulo"></title>
+	 <link rel="icon" type="image/png" href="../img/logook.png">
+   <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../bower_components/bootstrap-datepicker/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="../bower_components/angular-toastr/dist/angular-toastr.min.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap-fileinput/css/fileinput.css">
+	<link rel="stylesheet"  href="../css/main/style.css">
+  <link rel="stylesheet" href="../bower_components/material-design-lite/material.css">
+  <link rel="stylesheet"  href="../bower_components/ngprogress/ngProgress.css">
+  <link rel="stylesheet"  href="../bower_components/angular-bootstrap-colorpicker/css/colorpicker.min.css">
+
+  <script src="../bower_components/material-design-lite/material.js"></script>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-route/angular-route.js"></script>
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script src="../bower_components/bootstrap-fileinput/js/fileinput.js"></script>
+  <script src="../bower_components/firebase/firebase.js"></script>
+  <script src="../bower_components/ngprogress/ngprogress.js"></script>
+	<script src="../bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+  <script src="../bower_components/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.min.js"></script>
+  <script src ="../bower_components/angularfire/dist/angularfire.min.js"></script>
+	<script src="../js/services/services.js"></script>
+  <script src="../js/directives/directives.js"></script>
+	<script src="../js/controllers/main/noteController.js"></script>
+	<script src="../js/controllers/main/homeController.js"></script>
+  <script src="../js/controllers/main/profileController.js"></script>
+  <script src="../js/controllers/main/settupController.js"></script>
+	<script src="../js/modules/main/app.js"></script>
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <header class="mdl-layout__header " ng-controller="navbarController" ng-style="{'background-color':settup.navbarbackgroundcolor,'color':settup.navbartextcolor}">
+ 
+    <div class="mdl-layout__header-row">
+
+      <div class="mdl-layout-spacer"></div>
+
+      <!-- Number badge on icon -->
+<div class="material-icons mdl-badge mdl-badge--overlap margin-notification" data-badge="1" ng-style="{'color':settup.navbariconscolor}">notifications</div>
+
+      <!-- Right aligned menu below button -->
+<button id="demo-menu-lower-right"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons" ng-style="{'color':settup.navbariconscolor}">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-right">
+  <a class="mdl-menu__item" href="#/refresh">Actualizar Allsoft Note</a>
+  <a class="mdl-menu__item" href="#/exit">Salir de Allsoft Note</a>
+</ul>
+     
+    </div>
+  </header>
+
+  <div class="mdl-layout__drawer" ng-controller="sidenavController" 
+  ng-style="{'background-color':settupside.sidenavbackgroundcolor}">
+
+      <div class="panel" ng-style="{'background-color':settupside.sidenavprofilebackgroundcolor}">
+
+    <span class="mdl-layout-title text-center" ng-style="{'color':settupside.sidenavtitlecolor}"> Allsoft Note</span><hr />
+  <div class="panel-body">
+  <img ng-src="{{user.profile}}"  class=" img-responsive  grey-darken cursor-pointer" id="perfil">
+  <ul class="nav nav-pills nav-stacked">
+  <li role="presentation"><a href="#/profile" class="text-center black-text" 
+  ng-style="{'color':settupside.sidenavuserinfocolor}">{{user.name+' '+user.lastname}}</a></li>
+</ul>
+
+
+  <ul class="list-group">
+    <li class="list-group-item" ng-bind="user.email" 
+    ng-style="{'color':settupside.sidenavuseremailcolor,'background-color':settupside.sidenavemailbackgroundcolor}"></li>
+  </ul>
+</div>
+    </div>
+
+        <div class="mdl-navigation ">
+      
+
+    <a class="mdl-navigation__link" href="#/home"><i class="material-icons" 
+    ng-style="{'color':settupside.sidenaviconhomecolor}">home</i>Inicio</a>
+   <div class="divider"></div>
+    <a class="mdl-navigation__link" href="#/note"><i class="material-icons" 
+    ng-style="{'color':settupside.sidenaviconnotecolor}">note_add</i> Notas</a>
+    <a class="mdl-navigation__link" href="#/profile"><i class="material-icons" 
+    ng-style="{'color':settupside.sidenaviconprofilecolor}">account_circle</i>Perfil</a>
+    <a class="mdl-navigation__link" href="#/settup"><i class="material-icons"
+    ng-style="{'color':settupside.sidenaviconsettupcolor}">settings</i>Ajustes</a>
+      <div class="divider"></div>
+    </div>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content" ng-view></div>
+  </main>
+  <footer class="mdl-mini-footer" ng-controller="footerController" ng-style="{'background-color':settup.footerbackgroundcolor}">
+      
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo" ng-style="{'color':settup.footertextcolor}">Allsoft Company</div>
+    <ul class="mdl-mini-footer__link-list">
+      <li><a href="#" ng-style="{'color':settup.footertextcolor}">Help</a></li>
+      <li><a href="#" ng-style="{'color':settup.footertextcolor}">Privacy & Terms</a></li>
+    </ul>
+  </div>
+  </footer>
+</div>
+
+</body>
+</html>

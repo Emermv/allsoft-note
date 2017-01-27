@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'ubuntu';
+  src: local('../../fonts/UbuntuCondensed-Regular.ttf'),url('../../fonts/UbuntuCondensed-Regular.ttf');
+}
+.ubuntu{
+  font-family: 'ubuntu';
+}
+body { padding-top: 70px; }
+html{
+	font-family: ubuntu;
+}
